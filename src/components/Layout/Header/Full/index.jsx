@@ -4,7 +4,6 @@ import { usePageLocale } from '../../../../hooks/usePageLocale';
 import { LanguageSwitcher } from '../../../LanguageSwitcher';
 import { Navigator } from '../../../Navigator';
 import { CategoriesDropdown } from '../CategoriesDropdown';
-import { DarkModeToggle } from '../DarkModeToggle';
 import { Logo } from '../../Icons/Logo';
 import { MobileMenu } from '../MobileMenu';
 
