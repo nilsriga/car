@@ -1,5 +1,5 @@
 const isDev = process.env.NODE_ENV === 'development';
-
+const path = require('path');
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://carmaster.gatsbyjs.io/',
@@ -30,8 +30,20 @@ module.exports = {
       options: {
         apiToken: '9fc0732a6d789e5a9902305e5941c6',
         localeFallbacks: {
-          'en': 'en'
+          'lv': 'en'
           
+        },
+      },
+    },
+    {
+      resolve: '@builder.io/gatsby',
+      options: {
+        // Replace with your Public API Key
+        publicAPIKey: "746be61c2558434bb2a8fa489a36b0b1",
+        templates: {
+          // Render every `page` model as a new page using the
+          // src/templates/page.jsx template based on the URL provided in Builder.io
+          page: path.resolve('src/templates/Page.jsx'),
         },
       },
     },
