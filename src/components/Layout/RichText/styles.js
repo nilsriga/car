@@ -1,5 +1,3 @@
-// Rich Text Container - Used for common mdx or StructuredText containers outside the blog
-
 import styled, { css } from 'styled-components';
 import { uncontrolledHTMLStyles } from '../sharedStyles/uncontrolledHTMLStyles';
 
@@ -19,10 +17,11 @@ export const RichTextStyles = styled.div`
           ul {
             padding-left: 1.33em;
           }
-        `}
+        `};
 
   --paragraphMargin: 0 0 1em 0;
   --listMargin: 0 0 0.33em 0;
+
   color: var(--baseTextColor);
   font-size: var(--baseM);
   line-height: 1.4;
@@ -47,6 +46,7 @@ export const RichTextStyles = styled.div`
     padding: 0.1em 0.2em;
     border-radius: 5px;
     color: var(--inlineCodeTextColor);
+    font-family: var(--defaultCodeStack);
   }
 
   @media (max-width: 768px) {

@@ -165,7 +165,6 @@ export const Header = () => {
           </NavList>
         </Nav>
         <Right>
-          <DarkModeToggle hideOnMobile />
           <VerticalDivider hideOnMobile />
           <LanguageSwitcher />
           <VerticalDivider hideOnDesktop />

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-// Sections
+/* Sections */
 
-const Section = styled.section`
+export const Section = styled.section`
   width: 100%;
   max-width: var(--globalContainer);
   margin: auto;
@@ -14,7 +14,7 @@ const Section = styled.section`
   align-items: center;
 `;
 
-const SectionGridTwoCols = styled.section`
+export const SectionGridTwoCols = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: var(--gapXL);
@@ -33,14 +33,13 @@ const SectionGridTwoCols = styled.section`
   }
 `;
 
-const SectionGridThreeCols = styled.section`
+export const SectionGridThreeCols = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: var(--gapXL);
   row-gap: var(--gapXL);
   margin: auto;
-  padding: ${({ noPaddings }) =>
-    noPaddings ? '0' : 'var(--globalPaddingTb) var(--globalPaddingLr)'};
+  padding: ${({ noPaddings }) => (noPaddings ? '0' : 'var(--globalPaddingTb) var(--globalPaddingLr)')};
   width: 100%;
   max-width: var(--globalContainer);
 
@@ -57,7 +56,7 @@ const SectionGridThreeCols = styled.section`
   }
 `;
 
-const SectionFlexTwoCols = styled.section`
+export const SectionFlexTwoCols = styled.section`
   width: var(--globalContainer);
   display: flex;
   flex-direction: row;
@@ -75,7 +74,7 @@ const SectionFlexTwoCols = styled.section`
   }
 `;
 
-const SectionFlexTwoColsReverse = styled(SectionFlexTwoCols)`
+export const SectionFlexTwoColsReverse = styled(SectionFlexTwoCols)`
   &&& {
     @media (max-width: 768px) {
       flex-direction: column-reverse;
@@ -97,9 +96,9 @@ const SectionFlexTwoColsReverse = styled(SectionFlexTwoCols)`
   }
 `;
 
-// Content containers
+/* Content containers */
 
-const ColumnFlex = styled.div`
+export const ColumnFlex = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,23 +109,13 @@ const ColumnFlex = styled.div`
     justify-content: flex-start;
 
     & img {
-      width: ${({ hasImg }) => hasImg && '150px'};
+      width: ${({ hasImg }) => (hasImg ? '150px' : 'auto')};
     }
   }
 `;
 
-const GridTextBox = styled.section`
+export const GridTextBox = styled.section`
   display: grid;
   row-gap: ${({ small }) => (small ? 'var(--gapSmall)' : 'var(--gapRegular)')};
   align-content: baseline;
 `;
-
-export {
-  Section,
-  SectionGridTwoCols,
-  SectionGridThreeCols,
-  SectionFlexTwoCols,
-  SectionFlexTwoColsReverse,
-  ColumnFlex,
-  GridTextBox,
-};

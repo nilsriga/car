@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // Articles
 
-const ArticleTitle = styled.h1`
+export const ArticleTitle = styled.h1`
   font-size: var(--headingXL);
   color: var(--headingsColor);
   text-align: center;
@@ -18,7 +18,7 @@ const ArticleTitle = styled.h1`
   }
 `;
 
-const ArticleSubtitle = styled.p`
+export const ArticleSubtitle = styled.p`
   font-size: var(--baseXL);
   color: var(--baseTextColor);
   text-align: center;
@@ -31,14 +31,13 @@ const ArticleSubtitle = styled.p`
 
 // Common
 
-const SectionTitle = styled.h1`
+export const SectionTitle = styled.h1`
   font-size: var(--headingL);
   color: var(--headingsColor);
   text-align: inherit;
   line-height: var(--headingsLineHeight);
   margin: auto;
-  padding: ${({ noPaddings }) =>
-    noPaddings ? '0' : ' 0 var(--globalPaddingLr)'};
+  padding: ${({ noPaddings }) => (noPaddings ? '0' : ' 0 var(--globalPaddingLr)')};
   width: 100%;
   max-width: var(--globalContainer);
 
@@ -47,7 +46,7 @@ const SectionTitle = styled.h1`
   }
 `;
 
-const HeadingMedium = styled.h1`
+export const HeadingMedium = styled.h1`
   font-size: var(--headingM);
   color: var(--headingsColor);
   text-align: inherit;
@@ -59,7 +58,7 @@ const HeadingMedium = styled.h1`
   }
 `;
 
-const HeadingSmall = styled.h1`
+export const HeadingSmall = styled.h1`
   font-size: var(--baseL);
   color: var(--headingsColor);
   text-align: inherit;
@@ -71,6 +70,13 @@ const HeadingSmall = styled.h1`
   }
 `;
 
+const Tip = styled.span`
+  width: var(--tipWidth);
+  border-radius: var(--tipWidth);
+  height: 100%;
+  background: var(--primaryColor);
+`;
+
 const HeadingSmallTip = styled(HeadingSmall)`
   &&& {
     --tipWidth: 3px;
@@ -80,25 +86,9 @@ const HeadingSmallTip = styled(HeadingSmall)`
   }
 `;
 
-const Tip = styled.span`
-  width: var(--tipWidth);
-  border-radius: var(--tipWidth);
-  height: 100%;
-  background: var(--primaryColor);
-`;
-
-const HeadingSmallWithTip = ({ children }) => (
+export const HeadingSmallWithTip = ({ children }) => (
   <HeadingSmallTip>
     <Tip />
     {children}
   </HeadingSmallTip>
 );
-
-export {
-  ArticleTitle,
-  ArticleSubtitle,
-  SectionTitle,
-  HeadingMedium,
-  HeadingSmall,
-  HeadingSmallWithTip,
-};

@@ -10,7 +10,7 @@ const slideFromTopAnim = keyframes`
 
   100% {
     opacity: 1;
-    translateY: translateY(0px);
+    transform: translateY(0px);
   }
 `;
 
