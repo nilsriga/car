@@ -11,7 +11,7 @@ function PageTemplate({ data }) {
   const models = data?.allBuilderModels;
   const page = models.page?.content;
 
-  return <BuilderComponent name="page" content={page} />;
+  return <BuilderComponent model="page" content={page} />;
 }
 
 export default PageTemplate;
