@@ -43,21 +43,21 @@ exports.createPages = async ({
 
   // Handle homepage server-side redirects - Start
 
-  // const secondaryLanguages = [...locales];
-  // secondaryLanguages.shift();
+  const secondaryLanguages = [...locales];
+  secondaryLanguages.shift();
 
-  // secondaryLanguages.forEach((language) => {
-  //   const langCode = language.split('-')[0];
+  secondaryLanguages.forEach((language) => {
+    const langCode = language.split('-')[0];
 
-  //   createRedirect({
-  //     fromPath: '/',
-  //     toPath: `/${language}/`,
-  //     isPermanent: false,
-  //     conditions: {
-  //       language: [langCode],
-  //     },
-  //   });
-  // });
+    createRedirect({
+      fromPath: '/',
+      toPath: `/${language}/`,
+      isPermanent: false,
+      conditions: {
+        language: [langCode],
+      },
+    });
+  });
 
   // Handle homepage server-side redirects - End
 
