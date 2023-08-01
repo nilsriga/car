@@ -1,8 +1,8 @@
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === 'production';
 const path = require('path');
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://carmaster.gatsbyjs.io/',
+    siteUrl: 'https://carmaster.gatsbyjs.io',
   },
   plugins: [
     {

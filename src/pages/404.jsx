@@ -14,7 +14,14 @@ import { isSSR } from '../functions/isSSR';
 import { NotFoundPageHead } from '../components/Head/NotFoundPageHead';
 import { useLocales } from '../hooks/useLocales';
 
+import { Builder, BuilderComponent } from '@builder.io/react';
+
 const NotFoundPage = () => {
+
+  if (Builder.isPreviewing || Builder.isEditing) {
+    return <BuilderComponent model="page" />
+ }
+
   const data = useStaticQuery(graphql`
     query {
       allDatoCmsNotFoundPage {
