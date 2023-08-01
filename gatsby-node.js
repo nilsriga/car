@@ -49,14 +49,14 @@ exports.createPages = async ({
   secondaryLanguages.forEach((language) => {
     const langCode = language.split('-')[0];
 
-    createRedirect({
-      fromPath: '/',
-      toPath: `/${language}/`,
-      isPermanent: false,
-      conditions: {
-        language: [langCode],
-      },
-    });
+    // createRedirect({
+    //   fromPath: '/',
+    //   toPath: `/${language}/`,
+    //   isPermanent: false,
+    //   conditions: {
+    //     language: [langCode],
+    //   },
+    // });
   });
 
   // Handle homepage server-side redirects - End
