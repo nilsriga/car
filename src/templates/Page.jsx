@@ -13,21 +13,20 @@ function PageTemplate({ data }) {
   if (!Builder.isEditing && !Builder.isPreviewing && !props.builderContent) {
     return <Your404Page />
  }
-  return <BuilderComponent name="page" model="models" content={props.builderContent} />;
+  return <BuilderComponent name="page" model="page" content={props.builderContent} />;
 }
-
-export default PageTemplate;
 
 // pageQuery is a GraphQL query that 
 // fetches each page's content from Builder. 
 // Your content is rendered within the 
 // PageTemplate using BuilderComponent, provided by Builder's SDK.
 export const pageQuery = graphql`
-  query ($path: String!) {
+  query ($path: String) {
     allBuilderModels {
-      onePage(target: { urlPath: $path }) {
+      page(target: { urlPath: $path }, limit: 1, options: { cachebust: true }) {
         content
       }
     }
   }
 `;
+export default PageTemplate;
