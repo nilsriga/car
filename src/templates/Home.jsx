@@ -13,6 +13,9 @@ import {
   HeadingSmallWithTip,
   SectionTitle,
 } from '../components/Layout/sharedStyles/headingStyles';
+import { builder, BuilderComponent } from '@builder.io/react'
+
+builder.init('746be61c2558434bb2a8fa489a36b0b1')
 
 const HomepageTemplate = ({
   data: {
@@ -27,6 +30,8 @@ const HomepageTemplate = ({
     datoCmsMiscTextString: { seeAllPosts },
   },
   pageContext,
+  props
+
 }) => (
   <PageWrapper
     pageData={pageContext}
@@ -54,6 +59,8 @@ const HomepageTemplate = ({
         </SectionGridThreeCols>
       }
     />
+    <BuilderComponent
+      model="page" />
     {postNodes.length > 0 && (
       <section style={{ paddingTop: 'var(--globalPaddingTb)' }}>
         <SectionTitle>{featuredPostsTitle}</SectionTitle>
@@ -96,7 +103,7 @@ const HomepageTemplate = ({
 export default HomepageTemplate;
 
 export const query = graphql`
-  query HomepageQuery($locale: String!) {
+  query HomepageQuery($locale: String!, $path: String!) {
     datoCmsHomepage(locale: { eq: $locale }) {
       locale
       seo {
@@ -171,6 +178,12 @@ export const query = graphql`
     datoCmsMiscTextString(locale: { eq: $locale }) {
       locale
       seeAllPosts
+    }
+    allBuilderModels {
+      onePage(
+        target: { urlPath: $path }
+        options: { cachebust: true }
+      ) { content }
     }
   }
 `;
