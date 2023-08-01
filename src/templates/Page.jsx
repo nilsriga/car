@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import { builder, BuilderComponent } from '@builder.io/react';
+import { builder, BuilderComponent } from '@builder.io/gatsby';
 
 // Initialize the Builder SDK with your organization's API Key
 // Find the API Key on: https://builder.io/account/settings
@@ -10,8 +10,10 @@ builder.init('746be61c2558434bb2a8fa489a36b0b1')
 function PageTemplate({ data }) {
   const models = data?.allBuilderModels;
   const page = models.page?.content;
-
-  return <BuilderComponent model="page" content={page} />;
+  if (!Builder.isEditing && !Builder.isPreviewing && !props.builderContent) {
+    return <Your404Page />
+ }
+  return <BuilderComponent name="page" model="models" content={props.builderContent} />;
 }
 
 export default PageTemplate;
