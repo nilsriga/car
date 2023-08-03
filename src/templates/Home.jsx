@@ -30,7 +30,6 @@ const HomepageTemplate = ({
     datoCmsMiscTextString: { seeAllPosts },
   },
   pageContext,
-  props
 
 }) => (
   <PageWrapper
