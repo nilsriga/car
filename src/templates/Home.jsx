@@ -38,6 +38,8 @@ const HomepageTemplate = ({
     seoDescription={seo?.seoDescription}
     seoImage={seo?.seoImage?.seoImageUrl}
   >
+    <BuilderComponent
+      model="page" />
     <Hero
       caption={heroAlt}
       title={heroTitle}
@@ -58,8 +60,7 @@ const HomepageTemplate = ({
         </SectionGridThreeCols>
       }
     />
-    <BuilderComponent
-      model="page" />
+
     {postNodes.length > 0 && (
       <section style={{ paddingTop: 'var(--globalPaddingTb)' }}>
         <SectionTitle>{featuredPostsTitle}</SectionTitle>
