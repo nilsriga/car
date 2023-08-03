@@ -14,6 +14,8 @@ import {
   SectionTitle,
 } from '../components/Layout/sharedStyles/headingStyles';
 import { builder, BuilderComponent } from '@builder.io/react'
+import '@builder.io/widgets';
+
 
 builder.init('746be61c2558434bb2a8fa489a36b0b1')
 
