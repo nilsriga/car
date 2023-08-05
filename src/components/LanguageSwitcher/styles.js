@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 
 const Nav = styled.nav`
   display: grid;
+  padding-right: 1.875rem;
 `;
 
 const List = styled.ul`

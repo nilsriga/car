@@ -30,7 +30,9 @@ module.exports = {
       options: {
         apiToken: '9fc0732a6d789e5a9902305e5941c6',
         localeFallbacks: {
-          'lv': 'lv'
+          'lv': 'en',
+          'ru': 'lv',
+          'en': 'ru',
           
         },
       },

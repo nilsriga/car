@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.header`
-  padding: 0 var(--globalPaddingLr);
+  // padding: 0 var(--globalPaddingLr);
   margin: auto;
   width: 100%;
   // max-width: var(--globalContainer);
@@ -9,7 +9,7 @@ const Wrapper = styled.header`
 
 const Container = styled.div`
   width: 100%;
-  padding: var(--globalPaddingLr) 0;
+  // padding: var(--globalPaddingLr) 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
