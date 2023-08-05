@@ -4,7 +4,7 @@ const Wrapper = styled.header`
   padding: 0 var(--globalPaddingLr);
   margin: auto;
   width: 100%;
-  max-width: var(--globalContainer);
+  // max-width: var(--globalContainer);
 `;
 
 const Container = styled.div`
