@@ -39,7 +39,8 @@ exports.createPages = async ({
     `Found ${locales.length} languages: ${locales.join(', ')}`
   );
 
-  const [defaultLocale] = locales;
+  // const [defaultLocale] = locales;
+  const [defaultLocale] = ["lv"];
 
   // Handle homepage server-side redirects - Start
 
