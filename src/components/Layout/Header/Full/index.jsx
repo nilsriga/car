@@ -135,7 +135,7 @@ export const Header = () => {
           recordId={homepageRecordId}
           key={homepageRecordId}
         >
-          <Logo style={{'padding-left': '1.875rem'}} />
+          <Logo />
         </Navigator>
         <Nav>
           <NavList>
