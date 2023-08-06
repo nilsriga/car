@@ -49,5 +49,14 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Allison-Regular`,
+        ],
+        display: 'swap'
+      }
+    },
   ],
 };
