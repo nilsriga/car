@@ -9,7 +9,7 @@ export const Logo = (props) => (
   >
     <g
       transform="translate(0.000000,774.000000) scale(0.100000,-0.100000)"
-      fill="#000000"
+      fill="#545454"
       stroke="none"
     >
       <path d="M2338 6643 c29 -2 74 -2 100 0 26 2 2 3 -53 3 -55 0 -76 -1 -47 -3z" />
