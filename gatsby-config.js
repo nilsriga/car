@@ -42,6 +42,7 @@ module.exports = {
       options: {
         // Replace with your Public API Key
         publicAPIKey: "746be61c2558434bb2a8fa489a36b0b1",
+        useCache: true,
         templates: {
           // Render every `page` model as a new page using the
           // src/templates/page.jsx template based on the URL provided in Builder.io
@@ -50,13 +51,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-offline`,
       options: {
-        fonts: [
-          `Allison-Regular`,
-        ],
-        display: 'swap'
-      }
+        precachePages: ["/","/*"],
+        appendScript: require.resolve(`src/custom-sw-code.js`),
+      },
     },
   ],
 };

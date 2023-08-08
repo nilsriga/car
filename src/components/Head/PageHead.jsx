@@ -90,6 +90,14 @@ export const PageHead = ({ seoTitle, seoDescription, seoImage }) => {
         crossOrigin="anonymous"
       />
       <link rel="icon" href="/favicon-32.png" type="image/png" />
+      <link
+        key="Allison"
+        rel="preload"
+        href="/static/webfonts/Allison-Regular.ttf"
+        as="font"
+        type="font/ttf"
+        crossOrigin="anonymous"
+      />,
       {pwaIconSizes.map((size) => (
         <link
           key={`icon-${size}`}
@@ -97,6 +105,11 @@ export const PageHead = ({ seoTitle, seoDescription, seoImage }) => {
           sizes={`${size}x${size}`}
           href={`/images/icon-${size}.png`}
         />
+
+
+
+
+
       ))}
 
       {/* SEO meta tags */}
