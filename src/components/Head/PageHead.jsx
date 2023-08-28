@@ -90,14 +90,7 @@ export const PageHead = ({ seoTitle, seoDescription, seoImage }) => {
         crossOrigin="anonymous"
       />
       <link rel="icon" href="/favicon-32.png" type="image/png" />
-      <link
-        key="Allison"
-        rel="preload"
-        href="/static/webfonts/Allison-Regular.ttf"
-        as="font"
-        type="font/ttf"
-        crossOrigin="anonymous"
-      />,
+      <link href="https://fonts.cdnfonts.com/css/athira-barbie" rel="stylesheet"/>
       {pwaIconSizes.map((size) => (
         <link
           key={`icon-${size}`}

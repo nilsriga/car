@@ -95,7 +95,6 @@ export const Logo = (props) => (
         <path d="M4099 1713 c-13 -16 -12 -17 4 -4 9 7 17 15 17 17 0 8 -8 3 -21 -13z" />
       </g>
     </svg>
-    <p style={{ fontFamily: 'Alission', "marginTop": "-20px", "marginLeft": "30px" }}>SexyCar.lv</p>
+    <p style={{ fontFamily: `'Athira Barbie', sans-serif`, fontSize: "30px", "marginTop": "-47px", "marginLeft": "115px", color: "#297b6d" }}>SexyCar.lv</p>
   </div>
 );
-//patricijai 25.08 v.d.

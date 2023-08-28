@@ -42,11 +42,11 @@ module.exports = {
       options: {
         // Replace with your Public API Key
         publicAPIKey: "746be61c2558434bb2a8fa489a36b0b1",
-        useCache: true,
+        useCache: false,
         templates: {
           // Render every `page` model as a new page using the
           // src/templates/page.jsx template based on the URL provided in Builder.io
-          page: path.resolve('src/templates/Page.jsx'),
+          page: path.resolve('src/templates/BuilderLandingPage.jsx'),
         },
       },
     },
